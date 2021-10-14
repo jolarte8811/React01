@@ -1,0 +1,38 @@
+import React,{useState,useEffects,useRef} from 'react'};
+
+const productosIniciales=[
+{nombre: "papas", marca: 'margarita' precio: '1200'};
+{nombre: "gaseosa", marca: 'Postobon' precio: '4000'};
+{nombre: "pan", marca: 'N/A' precio: '2000'};
+
+const Productos=()=>{
+const [mostrarTabla, setMostarTabla]=useState(true);
+const [vehiculos, setVehiculos]=useState([]);
+const [textBoton,setTextBoton]=useState('Crear')
+
+
+return(
+
+<Formulario></Formulario>
+<Tabla></Tabla>
+)
+}
+
+
+const Tabla=()=>{
+
+return(
+
+
+)
+}
+
+const Formulario=()=>{
+
+return(
+
+
+)
+}
+
+]
