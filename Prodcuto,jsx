@@ -8,13 +8,31 @@ const productosIniciales=[
 const Productos=()=>{
 const [mostrarTabla, setMostarTabla]=useState(true);
 const [vehiculos, setVehiculos]=useState([]);
-const [textBoton,setTextBoton]=useState('Crear')
+const [textBoton,setTextBoton]=useState('Crear Nuevo')
+
+useEffect(()=>{
+setVehiculos(productosIniciales)
+,[]});
+
+useEffect(()=>{
+  if (mostrarTabla){setTextBoton('Crear Nuevo')   }
+  else {setTextBoton('Mostrar Todos')}
+  ,[mostrarTabla]})
 
 
 return(
+<h2>Pagina de Productos tienda</h2>
+<button onClick(()=>{setMostarTabla(!mostrarTabla)}>
+{textBoton}
+</button>
 
-<Formulario></Formulario>
-<Tabla></Tabla>
+{mostrarTabla? (<Tabla></Tabla>):
+               (<Formulario></Formulario>)}
+    
+ 
+
+<Tabla></Tabla>:
+
 )
 }
 
@@ -23,7 +41,7 @@ const Tabla=()=>{
 
 return(
 
-
+<h1>Tabla</h1>
 )
 }
 
@@ -31,7 +49,7 @@ const Formulario=()=>{
 
 return(
 
-
+<h1>Formulario</h1>
 )
 }
 
